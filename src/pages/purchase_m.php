@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment Management</title>
+    <title>Purchase Order</title>
     <link rel="stylesheet" href="../output.css">
     <script src="https://kit.fontawesome.com/6ea446285e.js" crossorigin="anonymous"></script>
 </head>
@@ -11,46 +11,20 @@
     <div class=" h-screen grid grid-cols-5 p-4 gap-4">
             <!-- sidebar -->
             <aside class=" hidden md:block col-span-1 bg-white rounded-2xl  font-semibold overflow-y-clip ">
-                <div class="my-4 flex flex-col mx-4 gap-2   ">
-                    <div class="py-3 px-2 hover:bg-darkgreen rounded-lg hover:text-white hover:cursor-pointer ">
-                        <a href="" class="">Dashboard</a>
-                    </div>
-                    <div class="py-3 px-2 hover:bg-darkgreen rounded-lg hover:text-white hover:cursor-pointer ">
-                        <a href="">User Management</a>
-                    </div>
-                    <div class="py-3 px-2 hover:bg-darkgreen rounded-lg hover:text-white hover:cursor-pointer ">
-                        <a href="">Category Management</a>
-                    </div>
-                    <div class="py-3 px-2 hover:bg-darkgreen rounded-lg hover:text-white hover:cursor-pointer ">
-                        <a href="">Item Management</a>
-                    </div>
-                    <div class="py-3 px-2 hover:bg-darkgreen rounded-lg hover:text-white hover:cursor-pointer ">
-                        <a href="">Supplier Management</a>
-                    </div>
-                    <div class="py-3 px-2 hover:bg-darkgreen rounded-lg hover:text-white hover:cursor-pointer ">
-                        <a href="">Purchase Order</a>
-                    </div>
-                    <div class="py-3 px-2 hover:bg-darkgreen rounded-lg hover:text-white hover:cursor-pointer ">
-                        <a href="">Receiving Orders</a>
-                    </div>
-                    <div class="py-3 px-2 hover:bg-darkgreen rounded-lg hover:text-white hover:cursor-pointer ">
-                        <a href="">Inventory Management</a>
-                    </div>
-                    
-                    <div class="py-3 px-2 hover:bg-red-500 rounded-lg hover:text-white hover:cursor-pointer ">
-                        <a href="">Logout</a>
-                    </div>
-                  
-                    
-                </div>
+            <?php include 'sidebar.php'; ?>
+
                 
             </aside>
 
 
             <!-- main -->
             <main class="col-span-5 bg-white rounded-2xl md:col-span-4 p-4 ">
-                <h1 class="font-bold text-2xl text-darkgreen ">Assign  Management</h1>
-                <h3 class="my-4 font-semibold text-lg">Assign items</h3>
+                <div class="flex justify-between">
+                    <h1 class="font-bold text-2xl text-darkgreen ">Purchase Order</h1>
+                    <h1 class="font-bold text-2xl text-red-500 " id="poID">PO-000001</h1>
+                </div>
+                
+                <h3 class="my-4 font-semibold text-lg">Suppliers Items</h3>
                 
                 <form action="">
                    
@@ -60,11 +34,11 @@
                 <div class="flex  flex-col gap-4 ">
                     <!-- user select -->
                     <div class=" flex flex-col gap-1">
-                        <label for="selectUser" class="font-bold">Select user:</label>
-                        <select name="selectUser" id="catFor" class="px-2 py-3 border-2 w-56">
+                        <label for="selectSupp" class="font-bold">Select supplier:</label>
+                        <select name="selectSupp" id="selectSupp" class="px-2 py-3 border-2 w-56">
 
                         </select>
-                        <input type="search" name="searchItem" id="searchItem" placeholder="Search..." class=" flex px-2 py-3 w-56 border-2">
+                        <input type="search" name="searchSuppItem" id="searchSuppItem" placeholder="Search..." class=" flex px-2 py-3 w-56 border-2">
                     </div>
                    
                    <!-- items to add -->
@@ -74,7 +48,6 @@
                             <tr class="bg-slate-300  ">
                                 <th class="px-2 py-3">Barcode</th>
                                 <th class="px-2 py-3">Item Name</th>
-                                <th class="px-2 py-3">Supplier</th>
                                 <th class="px-2 py-3">Quantity</th>
                                 <th class="px-2 py-3">Add</th>
                             </tr>
@@ -84,8 +57,6 @@
                                 <td class="px-2 py-3">John Doe</td>
                                 <td class="px-2 py-3">11111</td>
                                 <td class="px-2 py-3">CET</td>
-                                <td class="px-2 py-3">sample</td>
-                               
                                 <td class="px-2 py-3 flex gap-4  text-center">
                                  <input type="checkbox" name="checkedItem" id="checkedItem">
 
@@ -124,7 +95,7 @@
                         <thead class="">
                             <tr class="bg-slate-300  ">
                               
-                                <th class="px-2 py-3">User</th>
+                                <th class="px-2 py-3">Supplier</th>
                                 <th class="px-2 py-3">Barcode</th>
                                 <th class="px-2 py-3">Item name</th>
                                 <th class="px-2 py-3">Quantity</th>

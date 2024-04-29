@@ -11,38 +11,8 @@
     <div class=" h-screen grid grid-cols-5 p-4 gap-4">
             <!-- sidebar -->
             <aside class=" hidden md:block col-span-1 bg-white rounded-2xl  font-semibold overflow-y-clip ">
-                <div class="my-4 flex flex-col mx-4 gap-2   ">
-                    <div class="py-3 px-2 hover:bg-darkgreen rounded-lg hover:text-white hover:cursor-pointer ">
-                        <a href="" class="">Dashboard</a>
-                    </div>
-                    <div class="py-3 px-2 hover:bg-darkgreen rounded-lg hover:text-white hover:cursor-pointer ">
-                        <a href="">User Management</a>
-                    </div>
-                    <div class="py-3 px-2 hover:bg-darkgreen rounded-lg hover:text-white hover:cursor-pointer ">
-                        <a href="">Category Management</a>
-                    </div>
-                    <div class="py-3 px-2 hover:bg-darkgreen rounded-lg hover:text-white hover:cursor-pointer ">
-                        <a href="">Item Management</a>
-                    </div>
-                    <div class="py-3 px-2 hover:bg-darkgreen rounded-lg hover:text-white hover:cursor-pointer ">
-                        <a href="">Supplier Management</a>
-                    </div>
-                    <div class="py-3 px-2 hover:bg-darkgreen rounded-lg hover:text-white hover:cursor-pointer ">
-                        <a href="">Purchase Order</a>
-                    </div>
-                    <div class="py-3 px-2 hover:bg-darkgreen rounded-lg hover:text-white hover:cursor-pointer ">
-                        <a href="">Receiving Orders</a>
-                    </div>
-                    <div class="py-3 px-2 hover:bg-darkgreen rounded-lg hover:text-white hover:cursor-pointer ">
-                        <a href="">Inventory Management</a>
-                    </div>
-                    
-                    <div class="py-3 px-2 hover:bg-red-500 rounded-lg hover:text-white hover:cursor-pointer ">
-                        <a href="">Logout</a>
-                    </div>
-                  
-                    
-                </div>
+            <?php include 'sidebar.php'; ?>
+
                 
             </aside>
 
