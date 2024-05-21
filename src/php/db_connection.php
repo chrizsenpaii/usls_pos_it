@@ -1,8 +1,8 @@
 <?php
 // Database connection parameters
 $servername = "localhost";
-$username = "christian";
-$password = "112320gt";
+$username = "root";
+$password = "";
 $database = "usls_item_inventory"; // Your database name
 
 // Create connection

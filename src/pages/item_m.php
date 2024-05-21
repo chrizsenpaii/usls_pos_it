@@ -87,7 +87,7 @@
                     <!-- date  -->
                         <div class="flex flex-col gap-1 py-2">
                             <label for="date" class="font-bold">Date Received:</label>
-                            <input type="date" class="px-2 py-3 border-2 w-64" id="date" name="date">
+                            <input type="date" class="px-2 py-3 border-2 w-64" id="date" name="date" required>
                         </div>
 
                     
@@ -105,7 +105,7 @@
                                 <th class="px-2 py-3">Barcode</th>
                                 <th class="px-2 py-3">Item name</th>
                                 <th class="px-2 py-3">Supplier</th>
-                                <th class="px-2 py-3">Date Receive</th>
+                                <th class="px-2 py-3">Date Added</th>
                                 <th class="px-2 py-3">Action</th>
                             </tr>
                         </thead>

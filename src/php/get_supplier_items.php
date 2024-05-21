@@ -29,6 +29,7 @@ if ($result_items) {
         // Loop through each item and display in table rows
         while ($row = $result_items->fetch_assoc()) {
             echo "<tr>";
+            echo "<td class='px-2 py-3'>" . $row['ID'] . "</td>";
             echo "<td class='px-2 py-3'>" . $row['supplier'] . "</td>";
             echo "<td class='px-2 py-3'>" . $row['barcode'] . "</td>";
             echo "<td class='px-2 py-3'>" . $row['itemName'] . "</td>";

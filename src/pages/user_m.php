@@ -40,17 +40,17 @@
                     <!-- full name -->
                     <div class="flex flex-col gap-1">
                         <label for="fName" class="font-bold">Full name:</label>
-                        <input type="text" class="px-2 py-3 border-2 w-64" id="fName" name="fName" placeholder="Full name">
+                        <input type="text" class="px-2 py-3 border-2 w-64" id="fName" name="fName" placeholder="Full name" required>
                     </div>
                     <!-- School ID -->
                     <div class="flex flex-col gap-1">
                         <label for="sID" class="font-bold">School ID:</label>
-                        <input type="text" class="px-2 py-3 border-2 w-56"  name ="sID" id="sID" placeholder="School ID">
+                        <input type="text" class="px-2 py-3 border-2 w-56"  name ="sID" id="sID" placeholder="School ID" required>
                     </div>
                     <!-- Department -->
                     <div class="flex flex-col gap-1">
                         <label for="department" class="font-bold">Department:</label>
-                        <select name="department" id="department" class="px-2 py-3 border-2 w-56">
+                        <select name="department" id="department" class="px-2 py-3 border-2 w-56" >
                             <?php
                             // Include the database connection file
                             include '../php/db_connection.php';
@@ -69,7 +69,7 @@
                     <!-- role -->
                     <div class="flex flex-col gap-1">
                         <label for="role" class="font-bold">Role:</label>
-                        <select name="role" id="role" class="px-2 py-3 border-2 w-56">
+                        <select name="role" id="role" class="px-2 py-3 border-2 w-56" >
                             <?php
                             // Fetch roles
                             $sql_roles = "SELECT categoryName FROM category WHERE categoryFor = 'roles'";
@@ -87,7 +87,7 @@
                      <!-- contact no -->
                      <div class="flex flex-col gap-1 ">
                         <label for="contactNo" class="font-bold">Contact number:</label>
-                        <input type="text" class="px-2 py-3 border-2 w-64" id="contactNo" name="contactNo" placeholder="Contact Number">
+                        <input type="text" class="px-2 py-3 border-2 w-64" id="contactNo" name="contactNo" placeholder="Contact Number" required>
                     </div>
                 </form>
                 
